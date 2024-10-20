@@ -1,0 +1,24 @@
+@use "../presets/variables" as *;
+@use "../presets/skin" as *;
+@use "../mixins/mixins" as *;
+@use "../mixins/mixins-media" as *;
+@use "../mixins/extends" as *;
+
+*:before,
+*:after,
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-main;
+	font-size: $font-size;
+}
+
+h1 {
+	font-family: $font-header;
+}
+
+a {
+	text-decoration: none;
+}
