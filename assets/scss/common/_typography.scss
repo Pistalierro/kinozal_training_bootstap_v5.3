@@ -21,6 +21,12 @@ h1 {
 
 a {
 	text-decoration: none;
+	color: $color-primary;
+
+	&:hover,
+	&:focus {
+		color: $color-accent;
+	}
 }
 
 p {
