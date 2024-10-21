@@ -37,3 +37,13 @@
 		background-color: $color-gray-light;
 	}
 }
+
+.btn-info {
+	background-color: $color-light;
+	border-color: $color-gray;
+}
+
+.input-group-lg > .form-control {
+	font-size: 0.875em;
+	color: $color-gray;
+}

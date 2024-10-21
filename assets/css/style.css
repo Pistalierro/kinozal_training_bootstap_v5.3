@@ -58,6 +58,17 @@ p {
   background-color: #f4f4f4;
 }
 
+.btn-info {
+  border-color: #d5d5d5;
+  background-color: #ffffff;
+}
+
+.input-group-lg > .form-control {
+  color: #d5d5d5;
+
+  font-size: 0.875em;
+}
+
 .header-logo {
   padding: 100px 0;
 
