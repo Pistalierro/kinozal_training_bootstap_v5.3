@@ -1,0 +1,35 @@
+@use "../../presets/variables" as *;
+@use "../../presets/skin" as *;
+@use "../../mixins/mixins" as *;
+@use "../../mixins/mixins-media" as *;
+@use "../../mixins/extends" as *;
+
+.header {
+
+	&-logo {
+		text-align: center;
+		padding: 100px 0;
+
+		background-color: $color-dark;
+		background-image: url(../img/header-bg.jpg);
+		background-position: center;
+		background-size: cover;
+
+		&__title {
+			color: $color-accent;
+			font-size: 3.5rem;
+			letter-spacing: 0.33em;
+			margin-right: -0.33em;
+			font-family: $font-header;
+			display: block;
+			@extend %text-shadow;
+		}
+
+		&__description {
+			color: $color-light;
+			letter-spacing: 0.2em;
+			font-size: 1.15rem;
+			@extend %text-shadow;
+		}
+	}
+}

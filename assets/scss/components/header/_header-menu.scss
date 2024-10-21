@@ -1,0 +1,35 @@
+@use "../../presets/variables" as *;
+@use "../../presets/skin" as *;
+@use "../../mixins/mixins" as *;
+@use "../../mixins/mixins-media" as *;
+@use "../../mixins/extends" as *;
+
+.header-menu {
+	margin-bottom: $gap-xl;
+
+	.navbar-nav {
+		.nav-link {
+			text-align: center;
+			transition: background-color 0.25s, color 0.25s;
+
+			&:hover,
+			&:focus {
+				background-color: $color-primary-light;
+				color: $color-light;
+			}
+
+			@include sm-min {
+				border-radius: 4px;
+			}
+
+			&.active {
+				background-color: $color-primary-dark;
+
+				&:hover,
+				&:focus {
+					background-color: $color-primary;
+				}
+			}
+		}
+	}
+}

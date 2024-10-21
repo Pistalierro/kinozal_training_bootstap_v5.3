@@ -1,3 +1,8 @@
+.header-logo__title,
+.header-logo__description {
+  text-shadow: 0 0 5px #000000, 0 0 15px #000000, 0 0 30px #000000;
+}
+
 *:before,
 *:after,
 * {
@@ -16,4 +21,116 @@ h1 {
 
 a {
   text-decoration: none;
+}
+
+p {
+  text-align: justify;
+}
+
+.bg-body-tertiary {
+  background-color: #191919 !important;
+}
+
+.navbar > .container-md {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card {
+  border: none;
+}
+.card:not(:last-child) {
+  margin-bottom: 30px;
+}
+.card-header {
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  border: none;
+  background-color: #df8a13;
+
+  font-size: 1.2em;
+}
+.card-body {
+  border: 1px solid #d5d5d5;
+  border-radius: 0 0 4px 4px;
+  background-color: #f4f4f4;
+}
+
+.header-logo {
+  padding: 100px 0;
+
+  text-align: center;
+
+  background-color: #232323;
+  background-image: url(../img/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.header-logo__title {
+  display: block;
+
+  margin-right: -0.33em;
+
+  letter-spacing: 0.33em;
+
+  color: #df8a13;
+
+  font-family: "PT Serif", serif;
+  font-size: 3.5rem;
+}
+.header-logo__description {
+  letter-spacing: 0.2em;
+
+  color: #ffffff;
+
+  font-size: 1.15rem;
+}
+
+.header-menu {
+  margin-bottom: 80px;
+}
+.header-menu .navbar-nav .nav-link {
+  -webkit-transition: background-color 0.25s, color 0.25s;
+          transition: background-color 0.25s, color 0.25s;
+  text-align: center;
+}
+.header-menu .navbar-nav .nav-link:hover,
+.header-menu .navbar-nav .nav-link:focus {
+  color: #ffffff;
+  background-color: #517ba2;
+}
+.header-menu .navbar-nav .nav-link.active {
+  background-color: #043170;
+}
+.header-menu .navbar-nav .nav-link.active:hover,
+.header-menu .navbar-nav .nav-link.active:focus {
+  background-color: #165690;
+}
+
+.main {
+  margin-bottom: 80px;
+}
+
+.left-sidebar {
+  margin-bottom: 80px;
+}
+
+.vertical-slider {
+  overflow: hidden;
+
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .header-menu .navbar-nav .nav-link {
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 767.8px) {
+  .navbar > .container-md {
+    padding: 0;
+  }
 }
