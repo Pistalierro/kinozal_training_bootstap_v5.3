@@ -38,12 +38,22 @@
 	}
 }
 
-.btn-info {
+.btn-info,
+.btn:hover {
 	background-color: $color-light;
 	border-color: $color-gray;
 }
 
+.form-control,
 .input-group-lg > .form-control {
 	font-size: 0.875em;
 	color: $color-gray;
+}
+
+.nav-link:focus, .nav-link:hover {
+	color: $color-gray !important;
+
+	&.active {
+		color: $color-light !important;
+	}
 }

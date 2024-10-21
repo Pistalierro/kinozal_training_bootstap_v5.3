@@ -12,3 +12,25 @@
 	border-radius: 4px;
 	overflow: hidden;
 }
+
+.user-login {
+	position: relative;
+
+	&__tabs {
+		position: absolute;
+		top: 0;
+		right: $gap;
+		border: none;
+
+		button {
+			background-color: transparent !important;
+			border: none !important;
+			color: $color-gray;
+			padding: 11px 7px 10px;
+
+			&.active {
+				color: $color-light !important;
+			}
+		}
+	}
+}
