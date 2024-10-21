@@ -69,23 +69,82 @@
 <div class="container">
 	<div class="row">
 		<div class="main order-2 col-xl-9 col-lg-8">
-			<div class="col-sm-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, asperiores assumenda eius eligendi fugit labore maxime molestiae
-					nobis
-					quidem quos similique suscipit voluptas voluptatem? Asperiores aspernatur eveniet, impedit libero numquam perspiciatis sapiente
-					sunt
-					voluptates. Accusantium aliquid atque consectetur consequatur debitis dignissimos enim error esse est et ex explicabo fuga id
-					illum
-					impedit iste molestias mollitia necessitatibus odio, odit, possimus quam quo recusandae sunt, tempore totam unde vel. Aspernatur,
-					earum
-					excepturi illum in ipsam ipsum mollitia nemo, neque nihil nisi porro rem repudiandae saepe velit voluptatem! Accusamus atque enim,
-					eveniet fuga laudantium nulla quibusdam rerum. Dolores ducimus facere iste optio quisquam?</p>
+
+			<div class="site-search card d-lg-none">
+				<div class="card-header">Поиск</div>
+				<div class="card-body">
+					<form action="url/search">
+						<div class="input-group input-group-lg">
+							<input aria-describedby="button-addon2-main" aria-label="Recipient's username" class="form-control form-control-lg"
+							       name="search" placeholder="Поиск по сайту" type="text">
+							<button class="btn btn-info" id="button-addon2-main" type="submit">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
+
+			<div class="user-login card d-lg-none">
+				<div class="card-header">
+					Пользователь
+				</div>
+				<div class="card-body">
+					<ul class="user-login__tabs nav nav-tabs" id="myTabMain" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button aria-controls="home-tab-pane-main" aria-selected="true" class="nav-link active" data-bs-target="#home-tab-pane-main"
+							        data-bs-toggle="tab" id="user-login-main" role="tab"
+							        title="Вход" type="button"><i class="fa-solid fa-right-to-bracket"></i>
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button aria-controls="profile-tab-pane-main" aria-selected="false" class="nav-link" data-bs-target="#profile-tab-pane-main"
+							        data-bs-toggle="tab" id="user-registration-main" role="tab"
+							        title="Регистрация" type="button"><i class="fa-solid fa-user"></i>
+							</button>
+						</li>
+					</ul>
+
+					<div class="user-login__content tab-content" id="myTabMainContent">
+						<div aria-labelledby="user-login-main" class="tab-pane fade show active" id="home-tab-pane-main" role="tabpanel" tabindex="0">
+							<form action="url/login">
+								<div class="mb-3">
+									<input class="form-control form-control-lg" name="login" placeholder="Логин" type="text">
+								</div>
+								<div class="mb-3">
+									<input class="form-control form-control-lg" name="password" placeholder="Пароль" type="password">
+								</div>
+								<div class="d-grid">
+									<button class="btn btn-lg btn-info" type="button">Вход</button>
+								</div>
+							</form>
+						</div>
+
+						<div aria-labelledby="user-registration-main" class="tab-pane fade" id="profile-tab-pane-main" role="tabpanel" tabindex="0">
+							<form action="url/registration">
+								<div class="mb-3">
+									<input class="form-control form-control-lg" name="login" placeholder="Логин" type="text">
+								</div>
+								<div class="mb-3">
+									<input class="form-control form-control-lg" name="password" placeholder="Пароль" type="password">
+								</div>
+								<div class="mb-3">
+									<input class="form-control form-control-lg" name="email" placeholder="Email" type="email">
+								</div>
+								<div class="d-grid">
+									<button class="btn btn-lg btn-info" type="button">Регистрация</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="left-sidebar order-1 col-xl-3 col-lg-4">
 
-			<div class="vertical-slider card" style="width: 18rem;">
+			<div class="vertical-slider card d-none d-lg-block">
 				<div class="carousel slide" data-bs-ride="carousel" id="virtical-carousel">
 					<div class="carousel-indicators">
 						<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators"
@@ -116,7 +175,7 @@
 
 			</div>
 
-			<div class="site-search card" style="width: 18rem;">
+			<div class="site-search card">
 				<div class="card-header">Поиск</div>
 				<div class="card-body">
 					<form action="url/search">
@@ -131,12 +190,12 @@
 				</div>
 			</div>
 
-			<div class="user-login card" style="width: 18rem;">
+			<div class="user-login card">
 				<div class="card-header">
 					Пользователь
 				</div>
 				<div class="card-body">
-					<ul class="user-login__tabs nav nav-tabs" id="myTab" role="tablist">
+					<ul class="user-login__tabs nav nav-tabs" id="myTabSidebar" role="tablist">
 						<li class="nav-item" role="presentation">
 							<button aria-controls="home-tab-pane" aria-selected="true" class="nav-link active" data-bs-target="#home-tab-pane"
 							        data-bs-toggle="tab" id="user-login-sidebar" role="tab"
@@ -151,7 +210,7 @@
 						</li>
 					</ul>
 
-					<div class="user-login__content tab-content" id="myTabContent">
+					<div class="user-login__content tab-content" id="myTabSidebarContent">
 						<div aria-labelledby="user-login-sidebar" class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" tabindex="0">
 							<form action="url/login">
 								<div class="mb-3">
@@ -178,7 +237,7 @@
 									<input class="form-control form-control-lg" name="email" placeholder="Email" type="email">
 								</div>
 								<div class="d-grid">
-									<button class="btn btn-lg btn-info" type="button">Вход</button>
+									<button class="btn btn-lg btn-info" type="button">Регистрация</button>
 								</div>
 							</form>
 						</div>
@@ -186,7 +245,7 @@
 				</div>
 			</div>
 
-			<div class="site-news card" style="width: 18rem;">
+			<div class="site-news card">
 				<div class="card-header">Новости сайта</div>
 				<div class="card-body">
 
@@ -234,37 +293,67 @@
 
 			</div>
 
-			<div class="top-films card" style="width: 18rem;">
+			<div class="top-films card">
 				<div class="card-header">
 					Рейтинг фильмов
 				</div>
-				<div class="card-body">
-					This is some text within a card body.
+				<div class="top-films__body card-body ps-0 pe-0">
+					<ul class="top-films__list list-group list-group-flush">
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Дэдпул и Росомаха</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.3</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Плохие парни до конца</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">6.7</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Планета обезьян: Новое царство</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.2</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Дэдпул и Росомаха</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.3</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Плохие парни до конца</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">6.7</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Планета обезьян: Новое царство</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.2</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Дэдпул и Росомаха</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.3</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Плохие парни до конца</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">6.7</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Планета обезьян: Новое царство</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.2</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Дэдпул и Росомаха</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.3</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Плохие парни до конца</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">6.7</span>
+						</li>
+						<li class="top-films__item list-group-item d-flex gap-3 align-items-center justify-content-between">
+							<a class="top-films__link" href="#">Планета обезьян: Новое царство</a>
+							<span class="top-films__badge badge rounded-pill text-bg-secondary">7.2</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 
 		</div>
 	</div>
 </div>
-
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, asperiores assumenda eius eligendi fugit labore maxime molestiae
-					nobis
-					quidem quos similique suscipit voluptas voluptatem? Asperiores aspernatur eveniet, impedit libero numquam perspiciatis sapiente
-					sunt
-					voluptates. Accusantium aliquid atque consectetur consequatur debitis dignissimos enim error esse est et ex explicabo fuga id
-					illum
-					impedit iste molestias mollitia necessitatibus odio, odit, possimus quam quo recusandae sunt, tempore totam unde vel. Aspernatur,
-					earum
-					excepturi illum in ipsam ipsum mollitia nemo, neque nihil nisi porro rem repudiandae saepe velit voluptatem! Accusamus atque enim,
-					eveniet fuga laudantium nulla quibusdam rerum. Dolores ducimus facere iste optio quisquam?</p>
-			</div>
-		</div>
-	</div>
-</footer>
 
 
 <script src="assets/js/main.js"></script>

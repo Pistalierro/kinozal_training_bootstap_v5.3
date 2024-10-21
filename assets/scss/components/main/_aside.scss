@@ -49,7 +49,7 @@
 			background-color: $color-gray;
 		}
 	}
-	
+
 	img {
 		transition: background-color .25s;
 	}
@@ -76,5 +76,31 @@
 	&__date {
 		color: $color-gray-dark;
 		font-size: 0.8rem;
+	}
+}
+
+.top-films {
+	&__item {
+		background-color: transparent;
+		transition: background-color .25s;
+		margin-left: -0.5px;
+		margin-right: -0.5px;
+
+		&:hover, &:focus {
+			background-color: $color-accent;
+
+			.top-films__link {
+				color: $color-light;
+			}
+
+			.top-films__badge {
+				background-color: $color-dark !important;
+			}
+		}
+	}
+
+	&__link,
+	&__badge {
+		transition: color .25s;
 	}
 }

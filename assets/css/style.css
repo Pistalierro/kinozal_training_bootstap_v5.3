@@ -24,10 +24,6 @@ a {
 
   color: #165690;
 }
-a:hover,
-a:focus {
-  color: #df8a13;
-}
 
 p {
   text-align: justify;
@@ -219,6 +215,33 @@ p {
   color: #6f6f6f;
 
   font-size: 0.8rem;
+}
+
+.top-films__item {
+  margin-right: -0.5px;
+  margin-left: -0.5px;
+
+  -webkit-transition: background-color 0.25s;
+          transition: background-color 0.25s;
+
+  background-color: transparent;
+}
+.top-films__item:hover,
+.top-films__item:focus {
+  background-color: #df8a13;
+}
+.top-films__item:hover .top-films__link,
+.top-films__item:focus .top-films__link {
+  color: #ffffff;
+}
+.top-films__item:hover .top-films__badge,
+.top-films__item:focus .top-films__badge {
+  background-color: #232323 !important;
+}
+.top-films__link,
+.top-films__badge {
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
 }
 @media (min-width: 768px) {
   .header-menu .navbar-nav .nav-link {
